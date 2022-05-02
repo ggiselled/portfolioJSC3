@@ -483,6 +483,11 @@ body{
       font-size: 15px;
       
     }
+
+    ol, ul{
+      padding-left: 0rem;
+    }
+    
     
     .header__pages{
       flex-direction: column;

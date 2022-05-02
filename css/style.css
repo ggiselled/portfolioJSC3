@@ -38,6 +38,32 @@ body{
 
 /*         ANIMATIONS         */
 
+/* Underline animation */
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 /* Footer */
 
 .footer__socialmedia .scale-down-center:hover{
@@ -319,20 +345,42 @@ body{
 /* ----------SCREENWRITER, FILMMAKER, ESCRITOR ---------- */
 
 .services{
-    height: 100vh;
-    background-color: #020001;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    grid-area: sectionPages;
-    
+  height: 100vh;
+  background-color: #020001;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  grid-area: sectionPages;
+  
 }
 
-.card{
-  width: 50%;
+.services img{
+  width: 200px;
 }
 
-/* ANIMACIÓN - IMG_SERVICES */
+.services__descriptions{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__descriptions h1{
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.services__descriptions p{
+  color:#fff;
+  line-height: 25px;
+  text-align:justify;
+  margin-top: 40px;
+}
+
+
+/* animación .services img */
 
 .flicker-3 {
 	-webkit-animation: flicker-3 2.5s linear infinite both;
@@ -460,7 +508,7 @@ body{
 }
 
 .container{
-  width: 50%;
+  width: 30%;
   margin-left: 10%;
   padding-top: 50px;
 }
@@ -482,8 +530,7 @@ body{
 }
 
 .contact-form textarea{
-  width: 100%;
-  height: 200px;
+  width: 100% ;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -492,21 +539,14 @@ body{
 }
 
 .contact-btn button{
-  border: 0;
-  padding: 15px 35px;
-  font-size: 22px;
+  border: 1px solid #fff;
+  padding: 5px 20px;
+  font-size: 20px;
   border-radius: 5px;
   color: #fff;
-  background-image: linear-gradient(90deg, #03228f 0%, #4e95ed 100%);
-  transition: .3 ease-in-out;
+  background-color: #020001;
+
 }
-
-.contact-btn button:hover{
-  background-image: linear-gradient(200 deg, #03228f 0%, #4e95ed 100%);
-}
-
-
-
 
 
 

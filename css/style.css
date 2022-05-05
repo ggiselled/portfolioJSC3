@@ -573,7 +573,7 @@ body{
 
   /* INDEX + GENERAL*/
 
-    .body__responsive{
+    .index__gridContainer{
         width: 100vw;
     }
                                               /* ACÁ SE ROMPE Y QUEDA EL SCROLL EN LA PARTE INFERIOR */
@@ -695,7 +695,7 @@ body{
    /* INDEX + GENERAL*/
 
 
-   .body__responsive{
+   .index__gridContainer{
     width: 100vw;
 }
 

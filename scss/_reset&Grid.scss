@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poiret One', cursive;
+    font-weight: bold; 
+}
+
+.index__gridContainer{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr auto auto 0.5fr;
+    grid-template-areas: 
+    "header header"
+    "services services"
+    "proyects proyects"
+    "footer footer";
+}
+
+.pages__gridContainer{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr auto 0.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "headerPages headerPages"
+    "sectionPages sectionPages"
+    "footerPages footerPages";
+}
+
+body{
+    background-color: #607d8b;
+}

@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poiret One', cursive;
+  font-weight: bold; }
+
+.index__gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr auto auto 0.5fr;
+  grid-template-areas: "header header" "services services" "proyects proyects" "footer footer"; }
+
+.pages__gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr auto 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas: "headerPages headerPages" "sectionPages sectionPages" "footerPages footerPages"; }
+
+body {
+  background-color: #607d8b; }
+
+.header__index {
+  background: url(../images/headerimg.jpeg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  grid-area: header; }
+  .header__index .logo {
+    margin-left: 30px;
+    width: 180px; }
+
+.menu {
+  max-width: 600px;
+  font-size: 20px; }
+  .menu .menu__horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; }
+    .menu .menu__horizontal > li > a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none; }
+    .menu .menu__horizontal > li:hover {
+      background-color: rgba(0, 0, 0, 0.5); }
+    .menu .menu__horizontal .menu__vertical {
+      position: absolute;
+      display: none;
+      list-style: none;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0.5); }
+      .menu .menu__horizontal .menu__vertical li:hover {
+        background-color: black; }
+      .menu .menu__horizontal .menu__vertical li a {
+        display: block;
+        color: white;
+        padding: 15px 15px 15px 20px;
+        text-decoration: none; }
+    .menu .menu__horizontal .menu__horizontal li:hover .menu__vertical {
+      display: block; }

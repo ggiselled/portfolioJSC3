@@ -1,0 +1,52 @@
+#services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+    background: url(../images/servicesimg.jpeg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    grid-area: services;
+
+    .card{
+        background-color: transparent;
+        color: #fff;
+        text-align: center;
+
+        img{
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+#proyects{
+    background-color: #020001;
+    grid-area: proyects;
+    margin-bottom: 7%;
+
+    .proyects__video{
+        display: flex;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: space-around
+
+        iframe{
+            border: 2px solid #fff;
+            width: 540px;
+            height: 310px;
+        }
+    }
+
+    .proyects__link{
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}

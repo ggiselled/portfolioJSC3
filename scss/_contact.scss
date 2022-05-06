@@ -1,0 +1,50 @@
+.contact{
+    height: 100vh;
+    background-color: #020001 !important;
+    color: #fff;
+    background: url(../images/op2.jpg) no-repeat;
+    background-position: 719% 39%;
+    background-attachment: fixed;
+
+    .container{
+        width: 30%;
+        margin-left: 10%;
+        padding-top: 50px;
+
+        .contact-title h2{
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .contact-form{
+            input{
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 25px;
+                border: 0;
+                outline: none;
+                border-radius: 5px;
+                background: #f6f7f9;
+            }
+
+            textarea{
+                width: 100% ;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                background: #f6f7f9;
+                outline: none;
+            }
+        }
+
+        .contact-btn button{
+            border: 1px solid #fff;
+            padding: 5px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #020001;
+        }
+    }
+}

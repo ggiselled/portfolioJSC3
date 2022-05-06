@@ -34,6 +34,14 @@ body {
     margin-left: 30px;
     width: 180px; }
 
+.header__pages {
+  display: flex;
+  justify-content: space-between;
+  grid-area: headerPages; }
+  .header__pages .logo {
+    margin-left: 30px;
+    width: 180px; }
+
 .menu {
   max-width: 600px;
   font-size: 20px; }
@@ -112,12 +120,13 @@ body {
   justify-content: space-between;
   grid-area: sectionPages; }
   .about .about__text {
-    padding: 50px h1;
-      padding-color: #fff;
-      padding-font-size: 30px;
-      padding-font-weight: bold;
-      padding-display: flex;
-      padding-justify-content: left; }
+    padding: 50px; }
+    .about .about__text h1 {
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      justify-content: left; }
     .about .about__text p {
       color: #fff;
       width: 85%;
@@ -198,20 +207,22 @@ body {
   display: inline-block;
   position: relative;
   color: #0087ca; }
-  .hover-underline-animation :after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out; }
-  .hover-underline-animation .hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left; }
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out; }
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left; }
 
 .flicker-3 {
   -webkit-animation: flicker-3 2.5s linear infinite both;

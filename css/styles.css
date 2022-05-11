@@ -33,6 +33,20 @@ body {
   .header__index .logo {
     margin-left: 30px;
     width: 180px; }
+  .header__index .menu {
+    max-width: 600px;
+    font-size: 20px; }
+    .header__index .menu .menu__horizontal {
+      list-style: none;
+      display: flex;
+      justify-content: space-around; }
+      .header__index .menu .menu__horizontal a {
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none; }
+        .header__index .menu .menu__horizontal a:hover {
+          background-color: rgba(0, 0, 0, 0.5); }
 
 .header__pages {
   display: flex;
@@ -41,36 +55,34 @@ body {
   .header__pages .logo {
     margin-left: 30px;
     width: 180px; }
-
-.menu {
-  max-width: 600px;
-  font-size: 20px; }
-  .menu .menu__horizontal {
-    list-style: none;
-    display: flex;
-    justify-content: space-around; }
-    .menu .menu__horizontal > li > a {
-      display: block;
-      padding: 15px 20px;
-      color: white;
-      text-decoration: none; }
-    .menu .menu__horizontal > li:hover {
-      background-color: rgba(0, 0, 0, 0.5); }
-    .menu .menu__horizontal .menu__vertical {
-      position: absolute;
-      display: none;
+  .header__pages .menu {
+    max-width: 600px;
+    font-size: 20px; }
+    .header__pages .menu .menu__horizontal {
       list-style: none;
-      width: 200px;
-      background-color: rgba(0, 0, 0, 0.5); }
-      .menu .menu__horizontal .menu__vertical li:hover {
-        background-color: black; }
-      .menu .menu__horizontal .menu__vertical li a {
+      display: flex;
+      justify-content: space-around; }
+      .header__pages .menu .menu__horizontal a {
         display: block;
+        padding: 15px 20px;
         color: white;
-        padding: 15px 15px 15px 20px;
         text-decoration: none; }
-    .menu .menu__horizontal .menu__horizontal li:hover .menu__vertical {
-      display: block; }
+        .header__pages .menu .menu__horizontal a:hover {
+          background-color: rgba(0, 0, 0, 0.5); }
+      .header__pages .menu .menu__horizontal .menu__vertical {
+        position: absolute;
+        display: none;
+        list-style: none;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.5); }
+        li .header__pages .menu .menu__horizontal .menu__vertical:hover {
+          background-color: black; }
+        .header__pages .menu .menu__horizontal .menu__vertical a {
+          position: absolute;
+          display: none;
+          list-style: none;
+          width: 200px;
+          background-color: rgba(0, 0, 0, 0.5); }
 
 #services {
   display: flex;
@@ -93,24 +105,20 @@ body {
 #proyects {
   background-color: #020001;
   grid-area: proyects;
-  margin-bottom: 7%; }
-  #proyects .proyects__video {
+  margin-bottom: 7%;
+  height: auto; }
+  #proyects .carousel-indicators {
+    margin-bottom: -1.5rem; }
+  #proyects a {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around iframe;
-      justify-content-border: 2px solid #fff;
-      justify-content-width: 540px;
-      justify-content-height: 310px; }
-    #proyects .proyects__video .carousel-indicators {
-      margin-bottom: -1.5rem; }
-  #proyects .proyects__link {
     text-align: center;
+    margin-top: 10px;
     line-height: 100px;
-    color: #fff; }
-    #proyects .proyects__link a {
-      text-decoration: none;
-      color: #fff; }
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none; }
 
 .about {
   height: auto;
@@ -352,7 +360,8 @@ body {
   grid-area: footer; }
   .footer .footer__follow {
     font-size: 60px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: bold; }
   .footer .footer__socialmedia img {
     width: 50px;
     margin-right: 20px; }

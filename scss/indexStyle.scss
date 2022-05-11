@@ -21,37 +21,28 @@
     }
 }
 
+
+
 #proyects{
     background-color: #020001;
     grid-area: proyects;
     margin-bottom: 7%;
-
-    .proyects__video{
-        display: flex;
-        flex-wrap: wrap;
-        align-items:center;
-        justify-content: space-around;
-
-        iframe{
-            border: 2px solid #fff;
-            width: 540px;
-            height: 310px;
-        }
+    height: auto;
 
     .carousel-indicators{
-        margin-bottom: -1.5rem;
-    }
+        margin-bottom: -1.5rem
     }
 
-    .proyects__link{
+    a{  
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
+        margin-top: 10px;
         line-height: 100px;
         color: #fff;
-
-        a{
-            text-decoration: none;
-            color: #fff;
-        }
+        font-size: 20px;
+        text-decoration: none;
     }
 }
 

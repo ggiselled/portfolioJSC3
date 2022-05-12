@@ -43,7 +43,7 @@ body {
       .header__index .menu .menu__horizontal a {
         display: block;
         padding: 15px 20px;
-        color: white;
+        color: #EEEEEE;
         text-decoration: none; }
         .header__index .menu .menu__horizontal a:hover {
           background-color: rgba(0, 0, 0, 0.5); }
@@ -65,7 +65,7 @@ body {
       .header__pages .menu .menu__horizontal a {
         display: block;
         padding: 15px 20px;
-        color: white;
+        color: #EEEEEE;
         text-decoration: none; }
         .header__pages .menu .menu__horizontal a:hover {
           background-color: rgba(0, 0, 0, 0.5); }
@@ -96,7 +96,7 @@ body {
   grid-area: services; }
   #services .card {
     background-color: transparent;
-    color: #fff;
+    color: #EEEEEE;
     text-align: center; }
     #services .card img {
       display: block;
@@ -116,7 +116,7 @@ body {
     text-align: center;
     margin-top: 10px;
     line-height: 100px;
-    color: #fff;
+    color: #EEEEEE;
     font-size: 20px;
     text-decoration: none; }
 
@@ -130,13 +130,13 @@ body {
   .about .about__text {
     padding: 50px; }
     .about .about__text h1 {
-      color: #fff;
+      color: #EEEEEE;
       font-size: 30px;
       font-weight: bold;
       display: flex;
       justify-content: left; }
     .about .about__text p {
-      color: #fff;
+      color: #EEEEEE;
       width: 85%;
       line-height: 25px; }
   .about .about__img {
@@ -148,37 +148,46 @@ body {
     .about .about__img img {
       width: 420px; }
 
-.services {
+.services, .screenwriter, .filmmaker, .editor {
   height: 100vh;
   background-color: #020001;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   grid-area: sectionPages; }
-  .services img {
+  .services img, .screenwriter img, .filmmaker img, .editor img {
     width: 200px; }
-  .services .services__descriptions {
+  .services .services__descriptions, .screenwriter .services__descriptions, .filmmaker .services__descriptions, .editor .services__descriptions {
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .services .services__descriptions h1 {
-      color: #fff;
+    .services .services__descriptions h1, .screenwriter .services__descriptions h1, .filmmaker .services__descriptions h1, .editor .services__descriptions h1 {
+      color: #EEEEEE;
       font-size: 30px;
       font-weight: bold; }
-    .services .services__descriptions p {
-      color: #fff;
+    .services .services__descriptions p, .screenwriter .services__descriptions p, .filmmaker .services__descriptions p, .editor .services__descriptions p {
+      color: #EEEEEE;
       line-height: 25px;
       text-align: justify;
       margin-top: 40px; }
 
+.screenwriter {
+  border: solid 1px #cfd8dc; }
+
+.filmmaker {
+  border: solid 1px #b0bec5; }
+
+.editor {
+  border: solid 1px #90a4ae; }
+
 .contact {
   height: 100vh;
   background-color: #020001 !important;
-  color: #fff;
+  color: #EEEEEE;
   background: url(../images/op2.jpg) no-repeat;
-  background-position: 719% 39%;
+  background-position: 50vh;
   background-attachment: fixed; }
   .contact .container {
     width: 30%;
@@ -187,7 +196,7 @@ body {
     .contact .container .contact-title h2 {
       font-size: 36px;
       margin-bottom: 15px;
-      color: #fff; }
+      color: #EEEEEE; }
     .contact .container .contact-form input {
       width: 100%;
       padding: 20px;
@@ -204,11 +213,11 @@ body {
       background: #f6f7f9;
       outline: none; }
     .contact .container .contact-btn button {
-      border: 1px solid #fff;
+      border: 1px solid #EEEEEE;
       padding: 5px 20px;
       font-size: 20px;
       border-radius: 5px;
-      color: #fff;
+      color: #EEEEEE;
       background-color: #020001; }
 
 .hover-underline-animation {
@@ -224,7 +233,7 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #EEEEEE;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out; }
 
@@ -357,7 +366,8 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  grid-area: footer; }
+  grid-area: footer;
+  color: #171a20; }
   .footer .footer__follow {
     font-size: 60px;
     text-transform: uppercase;
@@ -365,3 +375,131 @@ body {
   .footer .footer__socialmedia img {
     width: 50px;
     margin-right: 20px; }
+
+@media (max-width: 1320px) {
+  .about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: auto; }
+    .about .about__img {
+      flex-wrap: wrap; } }
+
+@media (max-width: 700px) {
+  .index__gridContainer {
+    width: 100vw; }
+  .header__index {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw; }
+    .header__index ol, .header__index ul {
+      padding-left: 0rem; }
+  .header__pages {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+  #proyects {
+    height: auto; }
+    #proyects .proyects__video {
+      margin-top: 100px;
+      flex-direction: column; }
+      #proyects .proyects__video iframe {
+        width: 50vw;
+        height: 50vh; }
+    #proyects a {
+      margin-top: 40px; }
+  #services {
+    flex-direction: column;
+    height: auto; }
+    #services .servicios__card {
+      margin-bottom: 5%;
+      margin-top: 3%; }
+      #services .servicios__card .card__img {
+        width: 110px; }
+  .about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto; }
+    .about .about__text {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+    .about .about__img {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; }
+  .services, .screenwriter, .filmmaker, .editor {
+    height: auto;
+    flex-direction: column; }
+    .services img, .screenwriter img, .filmmaker img, .editor img {
+      margin-top: 100px; }
+    .services .services__descriptions, .screenwriter .services__descriptions, .filmmaker .services__descriptions, .editor .services__descriptions {
+      margin-top: 100px;
+      margin-bottom: 100px; }
+      .services .services__descriptions p, .screenwriter .services__descriptions p, .filmmaker .services__descriptions p, .editor .services__descriptions p {
+        text-align: center;
+        width: 150%; }
+  .contact {
+    justify-content: center;
+    align-items: center; } }
+
+@media (max-width: 320px) {
+  .index__gridContainer {
+    width: 100vw; }
+  .header__index {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+    .header__index .menu__horizontal {
+      flex-direction: column;
+      text-align: center;
+      font-size: 15px; }
+  .header__pages {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center; }
+  #proyects {
+    height: auto; }
+    #proyects .proyects__link {
+      margin-top: 40px; }
+  #services {
+    flex-direction: column; }
+  .about {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto; }
+    .about .about__text {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+    .about .about__img {
+      display: flex;
+      flex-flow: column wrap; }
+  .services, .screenwriter, .filmmaker, .editor {
+    height: auto;
+    flex-direction: column; }
+    .services img, .screenwriter img, .filmmaker img, .editor img {
+      margin-top: 100px; }
+    .services .services__descriptions, .screenwriter .services__descriptions, .filmmaker .services__descriptions, .editor .services__descriptions {
+      margin-top: 100px;
+      margin-bottom: 100px; }
+      .services .services__descriptions p, .screenwriter .services__descriptions p, .filmmaker .services__descriptions p, .editor .services__descriptions p {
+        text-align: justify; }
+  .contact {
+    justify-content: center;
+    align-items: center; } }

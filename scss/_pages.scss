@@ -18,17 +18,34 @@
         align-items: center;
 
         h1{
-            color: #fff;
+            color: map-get($map: $colorfont, $key: primary);
             font-size: 30px;
             font-weight: bold;
         }
 
         p{
-            color:#fff;
+            color:map-get($map: $colorfont, $key: primary);
             line-height: 25px;
             text-align:justify;
             margin-top: 40px;
         }
     }
     
+}
+
+//Extends
+
+.screenwriter{
+    @extend .services;
+    border: solid 1px $light ;
+}
+
+.filmmaker{
+    @extend .services;
+    border: solid 1px $medium ;
+}
+
+.editor{
+    @extend .services;
+    border: solid 1px $dark ;
 }

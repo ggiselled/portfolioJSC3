@@ -6,6 +6,7 @@
     justify-content: space-evenly;
     align-items: center;
     grid-area: footer;
+    color: map-get($map: $colorfont, $key: secundary);
 
     .footer__follow{
         font-size: 60px;

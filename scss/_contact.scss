@@ -1,9 +1,10 @@
 .contact{
     height: 100vh;
-    background-color: #020001 !important;
-    color: #fff;
+    background-color: $bgc !important;
+    color: map-get($map: $colorfont, $key: primary );
     background: url(../images/op2.jpg) no-repeat;
-    background-position: 719% 39%;
+    // background-position: 719% 39%;
+    background-position:  50vh;
     background-attachment: fixed;
 
     .container{
@@ -14,7 +15,7 @@
         .contact-title h2{
             font-size: 36px;
             margin-bottom: 15px;
-            color: #fff;
+            color: map-get($map: $colorfont, $key: primary);
         }
 
         .contact-form{
@@ -39,12 +40,12 @@
         }
 
         .contact-btn button{
-            border: 1px solid #fff;
+            border: 1px solid map-get($map: $colorfont, $key: primary);
             padding: 5px 20px;
             font-size: 20px;
             border-radius: 5px;
-            color: #fff;
-            background-color: #020001;
+            color: map-get($map: $colorfont, $key: primary);
+            background-color: $bgc;
         }
     }
 }

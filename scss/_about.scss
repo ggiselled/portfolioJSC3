@@ -1,6 +1,6 @@
 .about{
     height: auto;
-    background-color: #020001;
+    background-color: $bgc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,7 +10,7 @@
         padding: 50px;
 
         h1{
-            color: #fff;
+            color: map-get($map: $colorfont, $key: primary );
             font-size: 30px;
             font-weight: bold;
             display: flex;
@@ -18,7 +18,7 @@
         }
 
         p{
-            color:#fff;
+            color:map-get($map: $colorfont, $key: primary );
             width: 85%;
             line-height: 25px;
         }

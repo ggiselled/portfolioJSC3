@@ -1,0 +1,210 @@
+//Responsive
+
+@mixin flexible ($dis, $direction, $corte, $just, $align){
+    display: $dis;
+    flex-flow: $direction $corte;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@media (max-width: 1320px){
+    .about{
+        @include flexible(flex,row, wrap, space-between, center);
+        height: auto;
+
+        .about__img{
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 700px){
+
+    //INDEX + GENERAL
+
+    .index__gridContainer{
+        width: 100vw;
+    }
+
+    .header__index{
+        @include flexible(flex, column, wrap, center, center);
+        max-width: 100vw;
+
+
+        ol, ul{
+            padding-left: 0rem;
+        }
+    }
+
+    .header__pages{
+        @include flexible(flex, column, wrap, center, center)
+    }
+
+    //INDEX - PROYECTS
+
+    #proyects{
+        height: auto;
+
+        .proyects__video{
+            margin-top: 100px;
+            flex-direction: column;
+
+            iframe{
+                width: 50vw;
+                height: 50vh;
+            }
+        }
+
+        a {
+            margin-top: 40px;
+        }
+    }
+
+    //INDEX - SERVICES
+
+    #services{
+        flex-direction: column;
+        height: auto;
+
+        .servicios__card{
+            margin-bottom: 5%;
+            margin-top: 3%;
+
+            .card__img{
+                width: 110px;
+            }
+        }
+    }
+
+    //ABOUT
+
+    .about{
+        @include flexible(flex, row, wrap, center, center);
+        height: auto;
+
+        .about__text{
+            @include flexible(flex, column, wrap, center, center);
+            text-align: center;
+        }
+
+        .about__img{
+           @include flexible(flex, column, wrap, center, center) //chequear
+        }
+    }
+
+    //SERVICES - SCREENWRITER, FILMMAKER, EDITOR
+
+    .services{
+        height: auto;
+        flex-direction: column;
+
+        img{
+            margin-top: 100px;
+        }
+
+        .services__descriptions{
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+            p{
+                text-align: center;
+                width: 150%
+            }
+        }
+    }
+
+    //CONTACT
+
+    .contact{
+        justify-content: center;
+        align-items: center;
+
+        }
+
+
+    }
+
+
+
+@media(max-width: 320px){
+
+    //INDEX + GENERAL
+
+
+.index__gridContainer{
+    width: 100vw;
+}
+
+.header__index{
+    @include flexible(flex, column, wrap, center, center);
+
+    .menu__horizontal{
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+.header__pages{
+    @include flexible(flex, column, wrap, center, center);
+}
+
+// INDEX - PROYECTS
+
+#proyects{
+    height: auto;
+
+    .proyects__link{
+        margin-top: 40px
+    }
+}
+
+#services{
+    flex-direction: column;
+}
+
+// ABOUT
+
+.about{
+    @include flexible(flex, row, nowrap, center, center);
+    height: auto;
+
+    .about__text{
+    @include flexible(flex, column, nowrap, center, center);
+    text-align: center;
+    }
+
+    .about__img{
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+// SERVICES - SCREENWRITER, FILMMAKER, EDITOR
+
+.services{
+    height: auto;
+    flex-direction: column;
+
+    img{
+        margin-top: 100px;
+    }
+
+    .services__descriptions{
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        p{
+            text-align: justify;
+        }
+    }
+}
+
+//CONTACT
+
+.contact{
+    justify-content: center;
+    align-items: center;
+}
+
+} 

@@ -30,59 +30,46 @@ body {
   display: flex;
   justify-content: space-between;
   grid-area: header; }
-  .header__index .logo {
-    margin-left: 30px;
-    width: 180px; }
-  .header__index .menu {
-    max-width: 600px;
-    font-size: 20px; }
-    .header__index .menu .menu__horizontal {
-      list-style: none;
-      display: flex;
-      justify-content: space-around; }
-      .header__index .menu .menu__horizontal a {
-        display: block;
-        padding: 15px 20px;
-        color: #EEEEEE;
-        text-decoration: none; }
-        .header__index .menu .menu__horizontal a:hover {
-          background-color: rgba(0, 0, 0, 0.5); }
 
 .header__pages {
   display: flex;
   justify-content: space-between;
+  height: 54px;
   grid-area: headerPages; }
-  .header__pages .logo {
-    margin-left: 30px;
-    width: 180px; }
-  .header__pages .menu {
-    max-width: 600px;
-    font-size: 20px; }
-    .header__pages .menu .menu__horizontal {
-      list-style: none;
-      display: flex;
-      justify-content: space-around; }
-      .header__pages .menu .menu__horizontal a {
-        display: block;
-        padding: 15px 20px;
-        color: #EEEEEE;
-        text-decoration: none; }
-        .header__pages .menu .menu__horizontal a:hover {
-          background-color: rgba(0, 0, 0, 0.5); }
-      .header__pages .menu .menu__horizontal .menu__vertical {
-        position: absolute;
-        display: none;
-        list-style: none;
-        width: 200px;
-        background-color: rgba(0, 0, 0, 0.5); }
-        li .header__pages .menu .menu__horizontal .menu__vertical:hover {
-          background-color: black; }
-        .header__pages .menu .menu__horizontal .menu__vertical a {
-          position: absolute;
-          display: none;
-          list-style: none;
-          width: 200px;
-          background-color: rgba(0, 0, 0, 0.5); }
+
+.logo {
+  margin-left: 30px;
+  width: 180px; }
+
+.menu {
+  max-width: 600px;
+  font-size: 20px; }
+  .menu .menu__horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; }
+    .menu .menu__horizontal li a {
+      display: block;
+      padding: 15px 20px;
+      color: white;
+      text-decoration: none; }
+  .menu .menu__horizontal li:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .menu .menu__horizontal .menu__vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .menu .menu__horizontal li:hover .menu__vertical {
+    display: block; }
+  .menu .menu__horizontal li:hover .menu__vertical li:hover {
+    background-color: black; }
+  .menu .menu__horizontal li:hover .menu__vertical li a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none; }
 
 #services {
   display: flex;
@@ -378,128 +365,151 @@ body {
 
 @media (max-width: 1320px) {
   .about {
-    display: flex;
-    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    height: auto; }
-    .about .about__img {
-      flex-wrap: wrap; } }
+    height: auto;
+    text-align: center; }
+  .about__img {
+    flex-wrap: wrap; } }
 
 @media (max-width: 700px) {
+  /* INDEX + GENERAL*/
   .index__gridContainer {
     width: 100vw; }
   .header__index {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     max-width: 100vw; }
-    .header__index ol, .header__index ul {
-      padding-left: 0rem; }
+  .menu__horizontal {
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px; }
+  ol, ul {
+    padding-left: 0rem; }
   .header__pages {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center; }
-  #proyects {
-    height: auto; }
-    #proyects .proyects__video {
-      margin-top: 100px;
-      flex-direction: column; }
-      #proyects .proyects__video iframe {
-        width: 50vw;
-        height: 50vh; }
-    #proyects a {
-      margin-top: 40px; }
-  #services {
-    flex-direction: column;
-    height: auto; }
-    #services .servicios__card {
-      margin-bottom: 5%;
-      margin-top: 3%; }
-      #services .servicios__card .card__img {
-        width: 110px; }
-  .about {
-    display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     height: auto; }
-    .about .about__text {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center;
-      text-align: center; }
-    .about .about__img {
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;
-      align-items: center; }
-  .services, .screenwriter, .filmmaker, .editor {
-    height: auto;
-    flex-direction: column; }
-    .services img, .screenwriter img, .filmmaker img, .editor img {
-      margin-top: 100px; }
-    .services .services__descriptions, .screenwriter .services__descriptions, .filmmaker .services__descriptions, .editor .services__descriptions {
-      margin-top: 100px;
-      margin-bottom: 100px; }
-      .services .services__descriptions p, .screenwriter .services__descriptions p, .filmmaker .services__descriptions p, .editor .services__descriptions p {
-        text-align: center;
-        width: 150%; }
-  .contact {
-    justify-content: center;
-    align-items: center; } }
-
-@media (max-width: 320px) {
-  .index__gridContainer {
-    width: 100vw; }
-  .header__index {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center; }
-    .header__index .menu__horizontal {
-      flex-direction: column;
-      text-align: center;
-      font-size: 15px; }
-  .header__pages {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center; }
+  /* INDEX - PROYECTS */
   #proyects {
     height: auto; }
-    #proyects .proyects__link {
-      margin-top: 40px; }
+  .proyects__video {
+    margin-top: 100px;
+    flex-flow: column; }
+  .proyects__video iframe {
+    width: 50vw;
+    height: 50vh; }
+  .proyects__link {
+    margin-top: 40px; }
+  /* INDEX - SERVICES */
   #services {
-    flex-direction: column; }
+    flex-direction: column;
+    height: auto; }
+  .servicios__card {
+    margin-bottom: 5%;
+    margin-top: 3%; }
+  .card__img {
+    width: 110px; }
+  /* ABOUT */
   .about {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     height: auto; }
-    .about .about__text {
-      display: flex;
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
-      text-align: center; }
-    .about .about__img {
-      display: flex;
-      flex-flow: column wrap; }
+  .about__text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .about__img {
+    display: flex;
+    flex-flow: column wrap; }
+  /* SERCIVES - SCREENWRITER, FILMMAKER, EDITOR */
   .services, .screenwriter, .filmmaker, .editor {
     height: auto;
     flex-direction: column; }
-    .services img, .screenwriter img, .filmmaker img, .editor img {
-      margin-top: 100px; }
-    .services .services__descriptions, .screenwriter .services__descriptions, .filmmaker .services__descriptions, .editor .services__descriptions {
-      margin-top: 100px;
-      margin-bottom: 100px; }
-      .services .services__descriptions p, .screenwriter .services__descriptions p, .filmmaker .services__descriptions p, .editor .services__descriptions p {
-        text-align: justify; }
+  .services img, .screenwriter img, .filmmaker img, .editor img {
+    margin-top: 100px; }
+  .services__descriptions {
+    margin-top: 100px;
+    margin-bottom: 100px; }
+  .services__descriptions p {
+    text-align: center;
+    width: 150%; }
+  /* CONTACT */
   .contact {
     justify-content: center;
     align-items: center; } }
+
+@media (max-width: 320px) {
+  /* INDEX + GENERAL*/
+  .index__gridContainer {
+    width: 100vw; }
+  .header__index {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+  .menu__horizontal {
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px; }
+  .header__pages {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+  /* INDEX - PROYECTS */
+  #proyects {
+    height: auto; }
+  .proyects__link {
+    margin-top: 40px; }
+  /* INDEX - SERVICES */
+  #services {
+    flex-direction: column; }
+  /* ABOUT */
+  .about {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto; }
+  .about__text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+  .about__img {
+    display: flex;
+    flex-flow: column wrap; }
+  /* SERCIVES - SCREENWRITER, FILMMAKER, EDITOR */
+  .services, .screenwriter, .filmmaker, .editor {
+    height: auto;
+    flex-direction: column; }
+  .services img, .screenwriter img, .filmmaker img, .editor img {
+    margin-top: 100px; }
+  .services__descriptions {
+    margin-top: 100px;
+    margin-bottom: 100px; }
+  .services__descriptions p {
+    text-align: justify; }
+  /* CONTACT */
+  .contact {
+    justify-content: center;
+    align-items: center; } }
+
+.screenwriter {
+  border: solid 1px #cfd8dc; }
+
+.filmmaker {
+  border: solid 1px #b0bec5; }
+
+.editor {
+  border: solid 1px #90a4ae; }

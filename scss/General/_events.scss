@@ -1,0 +1,37 @@
+
+//Extends
+
+.screenwriter{
+    @extend .services;
+    border: solid 1px $light ;
+}
+
+.filmmaker{
+    @extend .services;
+    border: solid 1px $medium ;
+}
+
+.editor{
+    @extend .services;
+    border: solid 1px $dark ;
+}
+
+// Variables
+
+    //backgrounds
+    
+    $bgc: #020001;
+    $bgc2: #607d8b;
+    
+        //border colors - pages
+    
+    $light: #cfd8dc;
+    $medium: #b0bec5;
+    $dark: #90a4ae;
+    
+    // Mapa
+    
+    $colorfont: (
+        primary: #EEEEEE,
+        secundary: #171a20
+    );

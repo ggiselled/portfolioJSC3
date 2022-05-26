@@ -566,6 +566,8 @@ body {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: bold; }
+  .footer h3 {
+    font-weight: bold; }
   .footer .footer__socialmedia img {
     width: 50px;
     margin-right: 20px; }
@@ -578,6 +580,14 @@ body {
     text-align: center; }
   .about__img {
     flex-wrap: wrap; } }
+
+@media (max-width: 768px) {
+  .contact .container {
+    padding-top: 50px;
+    width: 60%;
+    margin: auto; }
+    .contact .container .contact-title h2 {
+      text-align: center; } }
 
 @media (max-width: 700px) {
   /* INDEX + GENERAL*/

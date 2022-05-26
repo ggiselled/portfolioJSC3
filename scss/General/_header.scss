@@ -1,11 +1,29 @@
 .header__index{
+    display: flex;
+    justify-content: space-between;
+    grid-area: menu;
+  }
+
+  .headerOne{
     background: url(../images/headerimg.jpeg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-    display: flex;
-    justify-content: space-between;
     grid-area: header;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "menu menu menu"
+    ". . ."
+    ". nombre ."
+    ". . .";
+  }
+
+  .name{
+    color: #ffff;
+    text-align: center;
+    font-weight: bolder;
+    grid-area: nombre;
   }
 
   .header__pages{
@@ -76,3 +94,5 @@
 
 
   }
+
+  

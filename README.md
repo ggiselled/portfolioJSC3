@@ -10,5 +10,5 @@ La página cuenta con un índex y cuatro secciones. A través del índex, se pue
 ## Tecnologías aprendidas durante el curso y aplicadas al proyecto
 HTML5, CSS3, SASS, BOOTSTRAP, NODEJS
 
-##Demo
+## Demo
 Podés visitar la web acá: [www.jsc.com](http://https://ggiselled.github.io/portfolioJSC3/ "www.jsc.com")
